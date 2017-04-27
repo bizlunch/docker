@@ -1,8 +1,8 @@
 FROM bizlunch/nginx
 
 RUN  DEBIAN_FRONTEND=noninteractive add-apt-repository ppa:ondrej/php --yes --update && \
-	 DEBIAN_FRONTEND=noninteractive apt-get install -y \
-					php7.1 php7.1-curl php7.1-zip php7.1-pdo php7.1-gd php7.1-xml php7.1-apcu php7.1-mysql php7.1-intl
+	 DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+					php7.1-cli php7.1-fpm php7.1-curl php7.1-zip php7.1-pdo php7.1-gd php7.1-xml php7.1-apcu php7.1-mysql php7.1-intl
 
 ADD services/php        /etc/service/php/run
 
