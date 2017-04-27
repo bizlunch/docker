@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+rm -rf /etc/service/{sshd,syslog-forwarder,syslog-ng}
