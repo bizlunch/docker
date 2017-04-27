@@ -14,7 +14,8 @@ ADD services/nginx      /etc/service/nginx/run
 ADD misc/init       /etc/my_init.d/00_my_init
 
 RUN rm -rf /etc/service/{sshd,syslog-forwarder,syslog-ng} && \
-    rm -rf /etc/my_init.d/00_regen_ssh_host_keys.sh
+    rm -rf /etc/my_init.d/00_regen_ssh_host_keys.sh && \
+    chmod +x /etc/service/nginx/run
 
 EXPOSE 80
 
