@@ -5,7 +5,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
 	apt-get install -y \
 	                curl unzip \
-					php php-curl php-zip php-pdo php-gd php-xml php-apcu php-mysql php-intl \
 					nginx-light
           
 RUN mkdir /etc/service/nginx
