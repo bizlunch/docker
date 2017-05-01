@@ -1,6 +1,8 @@
-FROM node:7-alpine
+FROM phusion/baseimage:0.9.21
 
-RUN apk add --update alpine-sdk autoconf su-exec automake nasm libpng-dev
+RUN apt-get update && apt-get install curl git
+
+RUN curl -sL https://deb.nodesource.com/setup_7.x | bash - && \
+     apt-get install nodejs
 
 RUN npm install -g bower gulp --silent
-
